@@ -17,9 +17,26 @@ import com.google.zxing.qrcode.decoder.ErrorCorrectionLevel;
  
  
 public class qrs {
-  
+	  
 	public static void main(String[] args) {
-		generateQR("Chamath", "chamath.png");
+		
+		 String[] dataList = {"www.chamath.tk","www.surfedge.lk"
+		 };
+		 
+		 String[] nameList = {"ChamathP",
+				 "SurfEdge"};
+		
+		String folder ="QR"; // make sure the folder is already available 
+		
+		runAndGenerate(dataList, nameList, folder);
+		
+	}
+	
+	public static void runAndGenerate(String[] dataList,String[] nameList,String folder){
+		
+		for (int i = 0; i < nameList.length; i++) {
+			generateQR(dataList[i], folder+"/"+nameList[i]+"_"+dataList[i]+".png");
+		}
 	}
 	
 	public static void generateQR(String data, String filePath){
@@ -61,6 +78,6 @@ public class qrs {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		System.out.println("\n\nYou have successfully created QR Code.");
+		System.out.println("\nQR For ."+data+" Generated");
 	}
 }
