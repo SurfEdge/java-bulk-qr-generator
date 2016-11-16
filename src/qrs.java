@@ -20,8 +20,7 @@ public class qrs {
 	  
 	public static void main(String[] args) {
 		
-		 String[] dataList = {"www.chamath.tk","www.surfedge.lk"
-		 };
+		 String[] dataList = {"www.chamath.tk","www.surfedge.lk"};
 		 
 		 String[] nameList = {"ChamathP",
 				 "SurfEdge"};
